@@ -9,19 +9,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-/* ===== css/variables.css ===== */
-/* Archivo CSS no encontrado en la carga; se conserva la referencia original. */
 
-/* ===== css/base.css ===== */
-/* Archivo CSS no encontrado en la carga; se conserva la referencia original. */
-
-/* ===== css/components.css ===== */
-/* Archivo CSS no encontrado en la carga; se conserva la referencia original. */
-
-/* ===== css/styles.css ===== */
-/* Archivo CSS no encontrado en la carga; se conserva la referencia original. */
-</style>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header class="navbar">
@@ -233,5 +225,802 @@
       <span>Hecho para compartir.</span>
     </div>
   </footer>
+</body>
+</html>
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-normal);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  line-height: var(--line-height-tight);
+}
+
+h1 {
+  font-size: var(--font-size-3xl);
+}
+
+h2 {
+  font-size: var(--font-size-2xl);
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+}
+
+.container {
+  width: min(100% - var(--space-8), var(--container-max));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--space-20);
+}
+
+.section--soft {
+  background: var(--color-surface-soft);
+}
+
+.section--dark {
+  background: var(--color-primary-dark);
+  color: var(--color-white);
+}
+
+.eyebrow {
+  margin-bottom: var(--space-3);
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.eyebrow--light {
+  color: var(--color-accent);
+}
+
+@media (max-width: 50rem) {
+  h1 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .section {
+    padding-block: var(--space-16);
+  }
+}
+/* Botón */
+.btn {
+  display: inline-flex;
+  min-height: var(--button-height);
+  align-items: center;
+  justify-content: center;
+  padding-inline: var(--space-6);
+  border: var(--border-width) solid transparent;
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  transition: transform var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.btn:hover {
+  transform: translateY(calc(var(--space-1) * -1));
+}
+
+.btn:focus-visible {
+  outline: var(--space-1) solid var(--color-accent);
+  outline-offset: var(--space-1);
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn--primary:hover {
+  background: var(--color-primary-dark);
+}
+
+.btn--secondary {
+  border-color: var(--color-primary);
+  background: transparent;
+  color: var(--color-primary);
+}
+
+.btn--secondary:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn--full {
+  width: 100%;
+}
+
+.btn:disabled,
+.btn--disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  transform: none;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  min-height: var(--header-height);
+  border-bottom: var(--border-width) solid var(--color-border);
+  background: var(--color-bg);
+}
+
+.navbar__inner {
+  display: flex;
+  min-height: var(--header-height);
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+}
+
+.navbar__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xl);
+}
+
+.navbar__mark {
+  display: grid;
+  width: var(--space-10);
+  height: var(--space-10);
+  place-items: center;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.navbar__link {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.navbar__link:hover {
+  color: var(--color-primary);
+}
+
+.navbar__action {
+  white-space: nowrap;
+}
+
+/* Card */
+.card {
+  overflow: hidden;
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+/* Input */
+.input {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.input__label {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.input__field {
+  width: 100%;
+  min-height: var(--input-height);
+  padding-inline: var(--space-4);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.input__field::placeholder {
+  color: var(--color-text-muted);
+}
+
+.input__field:hover {
+  border-color: var(--color-primary);
+}
+
+.input__field:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0 0 0 var(--space-1) rgba(49, 92, 74, 0.12);
+}
+
+.input__field:disabled {
+  cursor: not-allowed;
+  background: var(--color-surface-soft);
+  opacity: 0.65;
+}
+
+.input__field--textarea {
+  min-height: calc(var(--input-height) * 2);
+  padding-block: var(--space-3);
+  resize: vertical;
+}
+
+/* Tag */
+.tag {
+  display: inline-flex;
+  width: fit-content;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+  background: var(--color-surface-soft);
+  color: var(--color-primary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+
+.tag--accent {
+  background: var(--color-accent);
+  color: var(--color-primary-dark);
+}
+
+/* Componentes de contenido */
+.menu-card {
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.menu-card:hover {
+  transform: translateY(calc(var(--space-1) * -1));
+  box-shadow: 0 1.25rem 2.5rem rgba(37, 40, 35, 0.12);
+}
+
+.menu-card__image {
+  width: 100%;
+  height: var(--image-card-height);
+  object-fit: cover;
+}
+
+.menu-card__body {
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-6);
+}
+
+.menu-card__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.menu-card__title {
+  margin-bottom: 0;
+}
+
+.menu-card__price {
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  white-space: nowrap;
+}
+
+.menu-card__description {
+  margin-bottom: 0;
+  color: var(--color-text-muted);
+}
+
+.feature-list {
+  display: grid;
+  gap: var(--space-3);
+  margin: var(--space-6) 0;
+  padding: 0;
+  list-style: none;
+}
+
+.feature-list__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-weight: var(--font-weight-medium);
+}
+
+.feature-list__icon {
+  display: grid;
+  width: var(--space-6);
+  height: var(--space-6);
+  place-items: center;
+  border-radius: 50%;
+  background: var(--color-surface-soft);
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+}
+/* Estilos propios de las páginas/secciones */
+.hero {
+  padding-block: var(--space-16) var(--space-20);
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.hero__title {
+  max-width: 11ch;
+  margin-bottom: var(--space-6);
+}
+
+.hero__text {
+  max-width: 58ch;
+  margin-bottom: var(--space-8);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-lg);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.hero__media {
+  position: relative;
+}
+
+.hero__media img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+.hero__badge {
+  position: absolute;
+  right: var(--space-6);
+  bottom: var(--space-6);
+  display: grid;
+  gap: var(--space-1);
+  max-width: 15rem;
+  padding: var(--space-5);
+  border-radius: var(--radius-md);
+  background: var(--color-overlay);
+  color: var(--color-white);
+  box-shadow: var(--shadow-card);
+}
+
+.hero__badge-label {
+  color: var(--color-accent);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+}
+
+.hero__badge strong {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xl);
+}
+
+.hero__badge span:last-child {
+  font-size: var(--font-size-xs);
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: var(--space-6);
+  margin-bottom: var(--space-10);
+}
+
+.section-heading__title {
+  margin-bottom: 0;
+}
+
+.text-link {
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--grid-gap);
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.about__media img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+.about__text {
+  margin-block: var(--space-6);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-lg);
+}
+
+.reservation {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.reservation__title {
+  margin-bottom: var(--space-4);
+}
+
+.reservation__text {
+  max-width: 38ch;
+  color: var(--color-white);
+  opacity: 0.8;
+}
+
+.form {
+  display: grid;
+  gap: var(--space-5);
+  padding: var(--space-8);
+}
+
+.form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.form__note {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  text-align: center;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: start;
+  gap: var(--space-12);
+}
+
+.contact__details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.contact__item {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-5);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.contact__label {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+}
+
+.footer {
+  padding-block: var(--space-6);
+  border-top: var(--border-width) solid var(--color-border);
+  background: var(--color-bg);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+@media (max-width: 62rem) {
+  .navbar__links {
+    display: none;
+  }
+
+  .hero__grid,
+  .about,
+  .reservation {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__title {
+    max-width: 16ch;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 42rem) {
+  .navbar__action {
+    display: none;
+  }
+
+  .hero {
+    padding-top: var(--space-12);
+  }
+
+  .menu-grid,
+  .form__row,
+  .contact__details {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hero__badge {
+    right: var(--space-3);
+    bottom: var(--space-3);
+  }
+
+  .footer__inner {
+    flex-direction: column;
+  }
+}
+:root {
+  /* Paleta */
+  --color-primary: #315C4A;
+  --color-primary-dark: #244538;
+  --color-secondary: #C9874B;
+  --color-accent: #E7B96A;
+  --color-bg: #FFFDF8;
+  --color-surface: #FFFFFF;
+  --color-surface-soft: #F5F1E8;
+  --color-text: #252823;
+  --color-text-muted: #6B6D66;
+  --color-border: #DDD9CF;
+  --color-white: #FFFFFF;
+  --color-overlay: #18251F;
+
+  /* Tipografía */
+  --font-heading: "DM Serif Display", serif;
+  --font-body: "Inter", sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2.25rem;
+  --font-size-3xl: 3.75rem;
+  --line-height-tight: 1.08;
+  --line-height-normal: 1.6;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Espaciado */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* Layout */
+  --container-max: 72rem;
+  --header-height: 5rem;
+  --grid-gap: var(--space-8);
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-pill: 999px;
+  --border-width: 1px;
+
+  /* Componentes */
+  --button-height: 3rem;
+  --input-height: 3.25rem;
+  --image-card-height: 15rem;
+  --shadow-card: 0 0.75rem 2rem rgba(37, 40, 35, 0.08);
+  --transition-fast: 180ms ease;
+  --transition-base: 260ms ease;
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casa Oliva | Styleguide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    .styleguide { padding-block: var(--space-12); }
+    .styleguide__section { display: grid; gap: var(--space-6); padding-block: var(--space-10); border-bottom: var(--border-width) solid var(--color-border); }
+    .styleguide__intro { max-width: 60ch; color: var(--color-text-muted); }
+    .swatches { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); }
+    .swatch { overflow: hidden; border: var(--border-width) solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); }
+    .swatch__color { height: var(--space-16); background: var(--swatch); }
+    .swatch__label { display: grid; gap: var(--space-1); padding: var(--space-4); }
+    .type-sample { display: grid; gap: var(--space-4); }
+    .component-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4); }
+    .component-card { max-width: 24rem; }
+    @media (max-width: 42rem) { .swatches { grid-template-columns: repeat(2, 1fr); } }
+  </style>
+</head>
+<body>
+  <main class="container styleguide">
+    <p class="eyebrow">Casa Oliva · Sistema de diseño</p>
+    <h1>Styleguide</h1>
+    <p class="styleguide__intro">
+      Documento vivo del sistema visual utilizado por el proyecto: variables,
+      tipografía, escala de espaciado y componentes reutilizables.
+    </p>
+
+    <section class="styleguide__section">
+      <h2>Paleta</h2>
+      <div class="swatches">
+        <div class="swatch"><div class="swatch__color" style="--swatch: var(--color-primary)"></div><div class="swatch__label"><strong>Primary</strong><span>--color-primary</span></div></div>
+        <div class="swatch"><div class="swatch__color" style="--swatch: var(--color-secondary)"></div><div class="swatch__label"><strong>Secondary</strong><span>--color-secondary</span></div></div>
+        <div class="swatch"><div class="swatch__color" style="--swatch: var(--color-accent)"></div><div class="swatch__label"><strong>Accent</strong><span>--color-accent</span></div></div>
+        <div class="swatch"><div class="swatch__color" style="--swatch: var(--color-surface-soft)"></div><div class="swatch__label"><strong>Surface soft</strong><span>--color-surface-soft</span></div></div>
+        <div class="swatch"><div class="swatch__color" style="--swatch: var(--color-bg)"></div><div class="swatch__label"><strong>Background</strong><span>--color-bg</span></div></div>
+        <div class="swatch"><div class="swatch__color" style="--swatch: var(--color-text)"></div><div class="swatch__label"><strong>Text</strong><span>--color-text</span></div></div>
+        <div class="swatch"><div class="swatch__color" style="--swatch: var(--color-text-muted)"></div><div class="swatch__label"><strong>Muted</strong><span>--color-text-muted</span></div></div>
+        <div class="swatch"><div class="swatch__color" style="--swatch: var(--color-border)"></div><div class="swatch__label"><strong>Border</strong><span>--color-border</span></div></div>
+      </div>
+    </section>
+
+    <section class="styleguide__section">
+      <h2>Tipografía</h2>
+      <div class="type-sample">
+        <h1>DM Serif Display · H1</h1>
+        <h2>DM Serif Display · H2</h2>
+        <h3>DM Serif Display · H3</h3>
+        <p>Inter · Texto de párrafo. Se utiliza para mejorar la lectura de la información del restaurante.</p>
+        <p><strong>Inter 700 · Texto destacado</strong></p>
+      </div>
+    </section>
+
+    <section class="styleguide__section">
+      <h2>Escala de espaciado</h2>
+      <div class="component-row">
+        <span>4px</span><span>8px</span><span>12px</span><span>16px</span><span>20px</span><span>24px</span><span>32px</span><span>40px</span><span>48px</span><span>64px</span><span>80px</span><span>96px</span>
+      </div>
+    </section>
+
+    <section class="styleguide__section">
+      <h2>Botones · estados</h2>
+      <div class="component-row">
+        <button class="btn btn--primary">Normal</button>
+        <button class="btn btn--primary">Hover / focusá el botón</button>
+        <button class="btn btn--primary btn--disabled" disabled>Disabled</button>
+        <button class="btn btn--secondary">Secundario</button>
+      </div>
+    </section>
+
+    <section class="styleguide__section">
+      <h2>Input · estados</h2>
+      <div class="component-row">
+        <label class="input">
+          <span class="input__label">Normal</span>
+          <input class="input__field" type="text" placeholder="Escribí algo">
+        </label>
+        <label class="input">
+          <span class="input__label">Disabled</span>
+          <input class="input__field" type="text" value="Campo bloqueado" disabled>
+        </label>
+      </div>
+    </section>
+
+    <section class="styleguide__section">
+      <h2>Card reutilizable</h2>
+      <article class="card menu-card component-card">
+        <img class="menu-card__image" src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=900&q=85" alt="Pasta de la casa">
+        <div class="menu-card__body">
+          <div class="menu-card__top">
+            <h3 class="menu-card__title">Pasta de la casa</h3>
+            <span class="menu-card__price">$12.500</span>
+          </div>
+          <p class="menu-card__description">Ejemplo de card preparada para recibir contenido dinámico.</p>
+          <span class="tag tag--accent">Favorito</span>
+        </div>
+      </article>
+    </section>
+  </main>
 </body>
 </html>
