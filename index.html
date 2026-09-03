@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Casa Oliva, restaurante contemporáneo con cocina de estación.">
+  <title>Casa Oliva | Restaurante</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a class="navbar__brand" href="#inicio" aria-label="Casa Oliva inicio">
+        <span class="navbar__mark">CO</span>
+        <span>Casa Oliva</span>
+      </a>
+
+      <nav class="navbar__links" aria-label="Navegación principal">
+        <a class="navbar__link" href="#menu">Menú</a>
+        <a class="navbar__link" href="#nosotros">Nosotros</a>
+        <a class="navbar__link" href="#reserva">Reservas</a>
+        <a class="navbar__link" href="#contacto">Contacto</a>
+      </nav>
+
+      <a class="btn btn--primary navbar__action" href="#reserva">Reservar mesa</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="eyebrow">Cocina de estación · Berazategui</p>
+          <h1 class="hero__title">Sabores simples, momentos inolvidables.</h1>
+          <p class="hero__text">
+            Una propuesta cálida donde los productos de estación se encuentran
+            con recetas contemporáneas y una mesa pensada para compartir.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#menu">Ver el menú</a>
+            <a class="btn btn--secondary" href="#reserva">Reservar</a>
+          </div>
+          <div class="hero__meta" aria-label="Información del restaurante">
+            <span>★ 4,9/5</span>
+            <span>·</span>
+            <span>Martes a domingo</span>
+            <span>·</span>
+            <span>19:00–00:30</span>
+          </div>
+        </div>
+
+        <div class="hero__media">
+          <img
+            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=85"
+            alt="Interior cálido de un restaurante"
+          >
+          <div class="hero__badge">
+            <span class="hero__badge-label">Especial de hoy</span>
+            <strong>Risotto de hongos</strong>
+            <span>Con parmesano y hierbas frescas</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="menu">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Nuestra carta</p>
+            <h2 class="section-heading__title">Favoritos de la casa</h2>
+          </div>
+          <a class="text-link" href="#reserva">Reservar para probarlos →</a>
+        </div>
+
+        <div class="menu-grid">
+          <article class="card menu-card">
+            <img class="menu-card__image" src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=900&q=85" alt="Pasta fresca con salsa">
+            <div class="menu-card__body">
+              <div class="menu-card__top">
+                <h3 class="menu-card__title">Pasta de la casa</h3>
+                <span class="menu-card__price">$12.500</span>
+              </div>
+              <p class="menu-card__description">Pasta fresca, crema de parmesano, tomates asados y albahaca.</p>
+              <span class="tag">Vegetariano</span>
+            </div>
+          </article>
+
+          <article class="card menu-card menu-card--featured">
+            <img class="menu-card__image" src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85" alt="Plato de carne con vegetales">
+            <div class="menu-card__body">
+              <div class="menu-card__top">
+                <h3 class="menu-card__title">Bife Casa Oliva</h3>
+                <span class="menu-card__price">$18.900</span>
+              </div>
+              <p class="menu-card__description">Corte argentino, papas doradas, vegetales de estación y reducción de vino.</p>
+              <span class="tag tag--accent">Favorito</span>
+            </div>
+          </article>
+
+          <article class="card menu-card">
+            <img class="menu-card__image" src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=85" alt="Postre de chocolate">
+            <div class="menu-card__body">
+              <div class="menu-card__top">
+                <h3 class="menu-card__title">Volcán de chocolate</h3>
+                <span class="menu-card__price">$7.900</span>
+              </div>
+              <p class="menu-card__description">Chocolate semiamargo, centro fundente, crema de vainilla y frutos rojos.</p>
+              <span class="tag">Postre</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="nosotros">
+      <div class="container about">
+        <div class="about__media">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1100&q=85" alt="Mesa preparada en Casa Oliva">
+        </div>
+        <div class="about__content">
+          <p class="eyebrow">Nuestra historia</p>
+          <h2 class="section-heading__title">Una mesa para quedarse un rato más.</h2>
+          <p class="about__text">
+            Casa Oliva nació de una idea sencilla: cocinar con buenos productos,
+            recibir con cercanía y crear un espacio donde cada visita se sienta especial.
+          </p>
+          <ul class="feature-list">
+            <li class="feature-list__item"><span class="feature-list__icon">✓</span> Productos de estación</li>
+            <li class="feature-list__item"><span class="feature-list__icon">✓</span> Cocina artesanal</li>
+            <li class="feature-list__item"><span class="feature-list__icon">✓</span> Opciones vegetarianas</li>
+          </ul>
+          <a class="btn btn--secondary" href="#contacto">Conocé el espacio</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="reserva">
+      <div class="container reservation">
+        <div class="reservation__intro">
+          <p class="eyebrow eyebrow--light">Reservas</p>
+          <h2 class="reservation__title">Tu mesa te espera.</h2>
+          <p class="reservation__text">
+            Completá el formulario y prepará tu próxima cena en Casa Oliva.
+          </p>
+        </div>
+
+        <form class="form card" action="#" method="post">
+          <div class="form__row">
+            <label class="input">
+              <span class="input__label">Nombre</span>
+              <input class="input__field" type="text" name="nombre" placeholder="Tu nombre" required>
+            </label>
+            <label class="input">
+              <span class="input__label">Personas</span>
+              <select class="input__field" name="personas">
+                <option>2 personas</option>
+                <option>3 personas</option>
+                <option>4 personas</option>
+                <option>5+ personas</option>
+              </select>
+            </label>
+          </div>
+          <div class="form__row">
+            <label class="input">
+              <span class="input__label">Fecha</span>
+              <input class="input__field" type="date" name="fecha" required>
+            </label>
+            <label class="input">
+              <span class="input__label">Horario</span>
+              <select class="input__field" name="horario">
+                <option>20:00</option>
+                <option>20:30</option>
+                <option>21:00</option>
+                <option>21:30</option>
+                <option>22:00</option>
+              </select>
+            </label>
+          </div>
+          <label class="input">
+            <span class="input__label">Comentario</span>
+            <textarea class="input__field input__field--textarea" name="comentario" placeholder="¿Alguna ocasión especial o pedido?"></textarea>
+          </label>
+          <button class="btn btn--primary btn--full" type="submit">Solicitar reserva</button>
+          <p class="form__note">La solicitud queda pendiente de confirmación.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="contacto">
+      <div class="container contact">
+        <div>
+          <p class="eyebrow">Encontranos</p>
+          <h2 class="section-heading__title">Venite a Casa Oliva.</h2>
+        </div>
+        <div class="contact__details">
+          <div class="contact__item">
+            <span class="contact__label">Dirección</span>
+            <strong>Av. Mitre 1234, Berazategui</strong>
+          </div>
+          <div class="contact__item">
+            <span class="contact__label">Teléfono</span>
+            <strong>11 4567-8900</strong>
+          </div>
+          <div class="contact__item">
+            <span class="contact__label">Instagram</span>
+            <strong>@casaoliva.restó</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© 2026 Casa Oliva</span>
+      <span>Hecho para compartir.</span>
+    </div>
+  </footer>
+</body>
+</html>

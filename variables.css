@@ -1,0 +1,64 @@
+:root {
+  /* Paleta */
+  --color-primary: #315C4A;
+  --color-primary-dark: #244538;
+  --color-secondary: #C9874B;
+  --color-accent: #E7B96A;
+  --color-bg: #FFFDF8;
+  --color-surface: #FFFFFF;
+  --color-surface-soft: #F5F1E8;
+  --color-text: #252823;
+  --color-text-muted: #6B6D66;
+  --color-border: #DDD9CF;
+  --color-white: #FFFFFF;
+  --color-overlay: #18251F;
+
+  /* Tipografía */
+  --font-heading: "DM Serif Display", serif;
+  --font-body: "Inter", sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2.25rem;
+  --font-size-3xl: 3.75rem;
+  --line-height-tight: 1.08;
+  --line-height-normal: 1.6;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Espaciado */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* Layout */
+  --container-max: 72rem;
+  --header-height: 5rem;
+  --grid-gap: var(--space-8);
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-pill: 999px;
+  --border-width: 1px;
+
+  /* Componentes */
+  --button-height: 3rem;
+  --input-height: 3.25rem;
+  --image-card-height: 15rem;
+  --shadow-card: 0 0.75rem 2rem rgba(37, 40, 35, 0.08);
+  --transition-fast: 180ms ease;
+  --transition-base: 260ms ease;
+}
